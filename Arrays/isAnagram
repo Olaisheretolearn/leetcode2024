@@ -1,0 +1,50 @@
+/*
+Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+ 
+
+Example 1:
+
+Input: s = "anagram", t = "nagaram"
+Output: true
+Example 2:
+
+Input: s = "rat", t = "car"
+Output: false
+ 
+
+Constraints:
+
+1 <= s.length, t.length <= 5 * 104
+s and t consist of lowercase English letters.
+ 
+
+Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
+
+ */
+
+
+/*There is a way to use a HashMap , but it's not faster , but maybe later , i'll implement that
+ */
+
+
+import java.util.Arrays;
+
+class Solution {
+
+
+    public boolean isAnagram(String s, String t) {
+        //bruteforce
+        char[] sArray = s.toCharArray();
+        char [] tArray = t.toCharArray();
+
+        Arrays.sort(sArray);
+        Arrays.sort(tArray);
+
+        String sCheck = new String(sArray);
+        String tCheck = new String(tArray);
+        return sCheck.equals(tCheck);
+    }
+}
