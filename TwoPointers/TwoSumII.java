@@ -26,6 +26,8 @@ Output: [1,2]
 Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We return [1, 2].
  */
 
+//This wasn't that hard
+
 class TwoSumII {
     public int[] twoSum(int[] numbers, int target) {
         int left = 0;
