@@ -27,6 +27,19 @@ Constraints:
 0 <= k <= 105
 
 
+COMMENTS
+AT firdst , i put one pointer at nums.length - k and started replacing it with the first element , and 
+left++
+right--;
+
+but it would never work if the number of elements were odd\
+and i found a work around for that  , after the rotationm , i would s=bubble the middle elemnt to the end of the
+array , woukd work , but another edge case where there are just 3 3l3m3nts 
+
+
+Finally , i decided to reverse the whole array , then reverse the first half up until K
+qnd reverse the other half as well
+
  */
 
 class Solution {
